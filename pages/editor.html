@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<title>NoxWeb</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles/transitions.css">
+</head>
+<body class="page-enter">
+<div id="app">
+ <div id="top">
+  <a class="logo home-link" href="../index.html" title="Back to NoxWeb home"><b>NX</b>NOXWEB</a>
+  <button id="pj" title="All projects">Projects</button><input id="pn" style="width:140px" aria-label="Project name" value="My Website">
+  <span id="st">Saved</span><span class="sep"></span>
+  <button id="un" title="Undo (Ctrl+Z)">Undo</button><button id="re" title="Redo (Ctrl+Shift+Z)">Redo</button>
+  <span class="sp"></span>
+  <span id="dv"></span><span class="sep"></span>
+  <button id="kb" title="Keyboard shortcuts (?)">?</button><button id="shb" title="Share and activity">Share</button><button id="pvb" title="Preview">Preview</button>
+  <button id="ex" class="pri" title="Export HTML/CSS">Export</button>
+ </div>
+ <div id="L">
+  <div class="tabs"><button data-t="ly" class="on">Layers</button><button data-t="pg">Pages</button><button data-t="in">Insert</button><button data-t="tk">Tokens</button><button data-t="cd">Code</button><button data-t="as">Assets</button></div>
+  <div class="pan" id="p-ly"></div><div class="pan" id="p-pg" hidden></div>
+  <div class="pan" id="p-tk" hidden></div><div class="pan" id="p-as" hidden><input type="file" id="asf" multiple accept="image/*,.svg,.avif,.woff,.woff2,.ttf,.otf"><div id="asm" class="em" style="padding:4px 0"></div><input id="asq" placeholder="Search assets" style="margin-top:6px"><div id="asl"></div><input type="file" id="asr" hidden></div><div class="pan" id="p-cd" hidden><div class="sec">Global CSS</div><textarea id="gc" spellcheck="false" style="min-height:130px;font:11px monospace" placeholder=".my-class{ color: red }"></textarea><i id="gs"></i><div class="sec">Generated HTML — <span id="ghp"></span></div><textarea id="gh" spellcheck="false" style="min-height:220px;font:11px monospace;white-space:pre"></textarea><div class="bt"><button id="ga" class="pri">Apply code to editor</button></div><i id="gs2"></i></div><div class="pan" id="p-in" hidden><div class="ins" id="insg"></div><div id="cmp"></div></div>
+ </div>
+ <div id="cv"><div id="wrap"><div id="frame"></div></div></div>
+ <div id="R"><div class="pan" id="in"></div></div>
+ <div id="bar"><span id="s1"></span><span id="s2"></span><span id="s3" style="cursor:pointer" title="Open pre-publish checks"></span><span class="sp"></span><span>Drag to reorder (in flow) or move freely (Free) · drag handles to resize · drag layers to reorder · Del delete · Ctrl+D duplicate · Ctrl+C/X/V · Ctrl+Z / Ctrl+Shift+Z · Esc deselect</span></div>
+</div>
+<div id="dash"></div>
+<div id="shr"></div>
+<div id="mdl"><div>
+ <p><b>Export</b> <i>— a normal website, no NoxWeb runtime. Copy the files into /website. One-click hosting isn't connected yet, so export is how you ship.</i></p>
+ <label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="xe" checked style="width:auto">Embed images and fonts in the files (recommended)</label><div id="xk"></div><label>HTML (one file per page)<textarea id="xh" readonly></textarea></label>
+ <label>css/styles.css<textarea id="xc" readonly></textarea></label><label>sitemap.xml + robots.txt<textarea id="xs" readonly></textarea></label>
+ <div class="bt"><button id="cp1">Copy HTML</button><button id="cp2">Copy CSS</button><button id="xx">Close</button></div>
+</div></div>
+<script src="../js/page-transition.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/model.js"></script>
+<script src="../js/commands.js"></script>
+<script src="../js/assets.js"></script>
+<script src="../js/export.js"></script>
+<script src="../js/canvas.js"></script>
+<script src="../js/panels.js"></script>
+<script src="../js/events.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/import.js"></script>
+<script src="../js/main.js"></script>
+</body></html>
